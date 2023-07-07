@@ -2,7 +2,7 @@ import { HttpStatus } from '@nestjs/common';
 import { ApiResponseOptions } from '@nestjs/swagger';
 import { ApiErrorDecorator } from './error.decorator';
 
-export function BadRequest(
+export function ApiBadRequest(
   message: string,
   description?: string,
   options?: ApiResponseOptions,
@@ -15,7 +15,7 @@ export function BadRequest(
   );
 }
 
-export function InternalError(
+export function ApiInternalError(
   message: string,
   description?: string,
   options?: ApiResponseOptions,
@@ -28,7 +28,7 @@ export function InternalError(
   );
 }
 
-export function NotFound(
+export function ApiNotFound(
   message: string,
   description?: string,
   options?: ApiResponseOptions,
@@ -36,7 +36,7 @@ export function NotFound(
   return ApiErrorDecorator(HttpStatus.NOT_FOUND, message, description, options);
 }
 
-export function Unauthorized(
+export function ApiUnauthorized(
   message: string,
   description?: string,
   options?: ApiResponseOptions,
