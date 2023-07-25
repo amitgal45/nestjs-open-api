@@ -64,7 +64,7 @@ export class EmployeeController extends BaseController {
     EmployeeDTO,
   )
   getEmployee(@Param('id') id: number) {
-    throw new BaseException(ErrorConsts.NOT_FOUND, HttpStatus.NOT_FOUND);
+    // throw new BaseException(ErrorConsts.NOT_FOUND, HttpStatus.NOT_FOUND);
     return this.transformObject(EmployeeDTO, {
       id,
       first_name: 'Amit',
